@@ -1,0 +1,284 @@
+.hero {
+    height: 100vh;
+    background: linear-gradient(-45deg, $primary-color, $secondary-color, $background-color, $primary-color);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: $spacing-lg;
+    color: $text-color;
+  
+    .hero-text {
+      opacity: 0;
+      animation: appear 1.5s ease forwards;
+  
+      h1 {
+        font-size: 3.5rem;
+        font-family: $font-title;
+      }
+    }
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes appear {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  h2 {
+    position: relative;
+    overflow: hidden;
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+  
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: $primary-color;
+      margin: 10px auto 0;
+      animation: slide 2s infinite alternate;
+    }
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(-10px); }
+    100% { transform: translateX(10px); }
+  }
+  
+  .about {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: $spacing-lg 0;
+  
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 $spacing-lg;
+      gap: $spacing-lg;
+    }
+  
+    .about-text {
+      flex: 1 1 400px;
+  
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: $spacing-md;
+      }
+    }
+  
+    .about-img {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        max-width: 90%;
+        border: 5px solid $primary-color;
+        animation: borderAnim 3s infinite alternate;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  
+  @keyframes borderAnim {
+    0% { border-color: $primary-color; }
+    100% { border-color: $text-color; }
+  }
+  
+  .projects {
+    background-color: $background-color;
+    color: $text-color;
+    padding: $spacing-lg 0;
+  
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: $spacing-lg;
+      padding: 0 $spacing-md;
+      max-width: 1100px;
+      margin: auto;
+    }
+  
+    .project-card {
+      background-color: $secondary-color;
+      padding: $spacing-md;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  
+      h3 {
+        margin-bottom: $spacing-sm;
+        color: $primary-color;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+  
+      &:hover {
+        transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        background-color: lighten($secondary-color, 5%);
+        border: 2px solid $primary-color;
+      }
+    }
+  }
+  
+  .contact {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: $spacing-lg 0;
+  
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: $spacing-lg;
+    }
+  
+    .contact-infos {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 2;
+      padding: 0 $spacing-md;
+      text-align: center;
+  
+      a {
+        color: $primary-color;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: lighten($primary-color, 10%);
+        }
+      }
+    }
+  }
+  
+  .button {
+    background-color: $text-color;
+    color: $secondary-color;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease;
+  
+    &:hover {
+      background-color: $primary-color;
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      color: $text-color;
+    }
+  }
+  
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-infos {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    background-color: $background-color;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .loader-text {
+      color: $primary-color;
+      font-size: 2.5rem;
+      font-family: $font-title;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid $primary-color;
+      width: 0;
+      animation: typing 3s steps(20) forwards, blink 0.7s step-end infinite alternate;
+    }
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 18ch; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: none;
+    z-index: 999;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.2) rotate(360deg);
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+  

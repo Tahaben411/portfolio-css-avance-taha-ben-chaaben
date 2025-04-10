@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Taha Ben Chaaben</title>
+
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="loader">
+        <span class="loader-text">Taha Ben Chaaben</span>
+    </div>
+      
+
+  <div id="particles-js"></div>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-text" data-aos="zoom-in">
+        <h1>Je suis <span class="typing"></span></h1>
+        <p>Développeur web passionné, créatif et curieux.</p>
+        <a href="#projects" class="button">Voir mes projets</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" id="about" data-aos="fade-up">
+    <div class="container about-content">
+      <div class="about-text">
+        <h2>À propos</h2>
+        <p>Je suis Taha Ben Chaaben, développeur web passionné par les interfaces modernes, les animations CSS et le développement responsive. J’aime créer des expériences utilisateurs fluides et créatives.</p>
+      </div>
+      <div class="about-img">
+        <img src="assets/images/profile.jpg" alt="Photo de Taha">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects" data-aos="fade-right">
+    <div class="container">
+      <h2>Mes Projets</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Portfolio</h3>
+          <p>Un site personnel responsive avec SASS, Flexbox et animations CSS.</p>
+        </div>
+        <div class="project-card">
+          <h3>Application To-Do</h3>
+          <p>Gestion de tâches avec HTML, CSS et JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3>Blog UI</h3>
+          <p>Maquette d’un blog en CSS Grid et typographie responsive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" data-aos="fade-left">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-infos">
+        <a href="assets/cv/cv-taha.pdf" class="button" download>Télécharger mon CV</a>
+        <p><strong>Nom :</strong> Taha Ben Chaaben</p>
+        <p><strong>Email :</strong> <a href="mailto:taha.ben-chaaben@efrei.net">taha.ben-chaaben@efrei.net</a></p>
+        <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/taha-ben-chaaben-/" target="_blank">linkedin.com/in/taha-ben-chaaben</a></p>
+        <p><strong>GitHub :</strong> <a href="https://github.com/Tahaben411" target="_blank">github.com/Tahaben411</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Taha Ben Chaaben. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#4ecca3" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#4ecca3",
+          "opacity": 0.4,
+          "width": 1
+        }
+      }
+    });
+  </script>
+   <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+.button {
+    background-color: $text-color;
+    color: $secondary-color;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s;
+  
+    &:hover {
+      background-color: $primary-color;
+      transform: scale(1.1);
+      color: $text-color;
+    }
+  }
+  
+  
